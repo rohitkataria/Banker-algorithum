@@ -33,3 +33,77 @@ Step 3:
 
 Step 4:	
 	Check if new state is safe or not.
+Test Cases:
+	
+	Test Case 1:
+Number of processes should be greater than one if you want to use banker’s algorithm otherwise there is no use of it only one member in safe sequence is for worth.
+
+System is in safe state.
+
+
+
+	 
+
+
+
+
+
+
+Test Case A: Safe sequence when processes are prevented from deadlock:
+1.	Request1: P0 requests 0 instances of A and 0 instances of B and 2 instances of C.
+        System is in safe state.
+
+		
+
+
+ 
+
+
+
+
+
+
+
+Test case  B:
+1.	Request2: P1 requests for 2 instances of A, 0 instances of B and 0 instances of C.
+2.	System is not in safe system.
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Boundary Condition:
+1.	For all the input cases user should enter integer value .
+2.	All the requirements must be entered to run the program.
+
+Code Snippet :
+      
+
+TIME COMPLEXITY OF BANKER ALGORITHUM:
+
+My question is, how is time complexity 0(n * n * m)? More specifically, how does the m term enter the polynomial? Is it because we have to do an element-by-element comparison on a vector of length m?
+but it is also nested in a repeat loop. If that loop can run, in worst case, n times, then the procedure has O(n*n*m) time complexity.
+So, the code that executes in the for loop has O(m+m) time complexity.
+Of course, O(m+m) = O(m) and the final complexity is O(n*n*m).
